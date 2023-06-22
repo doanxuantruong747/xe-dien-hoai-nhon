@@ -4,6 +4,9 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+
 html {
   font-family: 'Manrope', sans-serif;
 }
@@ -15,6 +18,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   font-family: 'Manrope', sans-serif;
+  /* font-family: 'Encode Sans', sans-serif; */
 }
 
 body::-webkit-scrollbar {

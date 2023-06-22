@@ -6,6 +6,8 @@ import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
 import '../i18next';
 import { Hero } from '@/components/home/Hero';
+import { Classify } from '@/components/home/classify/Classify';
+import { GiaHapDan } from '@/components/home/GiaHapDan';
 
 const LayoutWrapper = dynamic(() => import('@/components/Layout/Layout'), {
   ssr: false,
@@ -45,6 +47,7 @@ export default function Home() {
         <Popup setIsShow={setIsShow}/>
         } */}
         <Hero />
+        <GiaHapDan />
 
         <ScrollTop />
       </LayoutWrapper>

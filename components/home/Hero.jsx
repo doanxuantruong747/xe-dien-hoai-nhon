@@ -37,9 +37,9 @@ export const Hero = () => {
         handleResize();
         return () => window.removeEventListener('resize', handleResize);
     }, [screenMode]);
-    console.log(screenMode)
+
     return (
-        <div className='  pt-[100px] w-full 2xl:h-[93vh] xl:h-[80vh] lg:h-[75vh] md:h-[65vh] h-[80vh] cursor-pointer '>
+        <div className='  pt-[90px] w-full 2xl:h-[98vh] xl:h-[80vh] lg:h-[75vh] md:h-[65vh] h-[80vh] cursor-pointer '>
 
             <Swiper
                 pagination={{
