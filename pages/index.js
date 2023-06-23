@@ -8,6 +8,15 @@ import '../i18next';
 import { Hero } from '@/components/home/Hero';
 import { Classify } from '@/components/home/classify/Classify';
 import { GiaHapDan } from '@/components/home/GiaHapDan';
+import { VoltGuard } from '@/components/volt-Guard/VoltGuard';
+import { YadeaE3 } from '@/components/yadea-e3/YadeaE3';
+import { Nishiki } from '@/components/nishiki/Nishiki';
+import Odora from '@/components/odora/Odora';
+import { YadeaXBull } from '@/components/yadea-x-bull/YadeaXBull';
+import Igo from '@/components/Igo/Igo';
+import I5S from '@/components/I5S/I5S';
+import { YadeaM6i } from '@/components/yadea-M6i/YadeaM6i';
+import { Ulike } from '@/components/ulike/Ulike';
 
 const LayoutWrapper = dynamic(() => import('@/components/Layout/Layout'), {
   ssr: false,
@@ -47,7 +56,19 @@ export default function Home() {
         <Popup setIsShow={setIsShow}/>
         } */}
         <Hero />
-        <GiaHapDan />
+        <VoltGuard />
+        <Odora />
+        <YadeaE3 />
+        <YadeaM6i />
+        <Ulike />
+
+        <YadeaXBull />
+        <Igo />
+        <I5S />
+
+
+        <Nishiki />
+        {/* <GiaHapDan /> */}
 
         <ScrollTop />
       </LayoutWrapper>

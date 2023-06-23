@@ -19,7 +19,7 @@ const dataSlider = [
     { src: slide1, srcMobi: slide1Mobi },
     { src: slide2, srcMobi: slide2Mobi },
     { src: slide3, srcMobi: slide3Mobi },
-    { src: slide4, srcMobi: slide4 },
+    // { src: slide4, srcMobi: slide4 },
 ]
 
 
