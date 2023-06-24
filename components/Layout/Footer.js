@@ -70,7 +70,7 @@ const Footer = () => {
             <div className="pt-[10px]">
               {xeData.map((item, index) => (
                 <a href={item.to} key={index}>
-                  <h3 className=" text-[15px] font-medium text-[#798086] hover:text-[#ed6a00]">{item.title}</h3>
+                  <h3 className=" text-[15px] font-medium text-[#798086] hover:text-[#000080]">{item.title}</h3>
                 </a>
               ))}
             </div>
@@ -81,7 +81,7 @@ const Footer = () => {
             <div className="pt-[10px]">
               {hoTroData.map((item, index) => (
                 <a href={item.to} key={index}>
-                  <h3 className=" text-[15px] font-medium text-[#798086] hover:text-[#ed6a00]">{item.title}</h3>
+                  <h3 className=" text-[15px] font-medium text-[#798086] hover:text-[#000080]">{item.title}</h3>
                 </a>
               ))}
             </div>
@@ -109,12 +109,17 @@ const Footer = () => {
               <p className=" ">
                 Đ/c: 215A Trần Hưng Đạo, Hoài Nhon, Vietnam
               </p>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.49735421957973!2d109.01029706456117!3d14.429603216967086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3168c559e502e0f1%3A0xdb2caa48ed40a6fe!2zMjE1IFRy4bqnbiBIxrBuZyDEkOG6oW8sIFAuIELhu5NuZyBTxqFuLCBIb8OgaSBOaMahbiwgQsOsbmggxJDhu4tuaA!5e0!3m2!1svi!2s!4v1687597812402!5m2!1svi!2s"
+                width="250" height="150" ></iframe>
+
+
             </div>
           </div>
 
         </div>
-        <div className="h-[1px] bg-[#fff] w-full mt-[50px]" />
-        <span className="text-center text-[15px] font-medium text-[#798086] pt-[15px] ">
+        <div className="h-[1px] bg-[#fff] w-full mt-[50px] " />
+        <span className="text-center text-[15px] font-medium text-[#798086] pt-[15px] pb-[15px] ">
           Copyright © 2023 XeDienHoaiNhon </span>
       </div>
 
