@@ -1,22 +1,13 @@
 import ScrollTop from '@/components/ScrollTop';
+import { Hero } from '@/components/home/Hero';
+import { ListProduct } from '@/components/list-product/ListProduct';
 import 'animate.css';
 import 'animate.css/animate.min.css';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
 import '../i18next';
-import { Hero } from '@/components/home/Hero';
-import { Classify } from '@/components/home/classify/Classify';
-import { GiaHapDan } from '@/components/home/GiaHapDan';
-import { VoltGuard } from '@/components/volt-Guard/VoltGuard';
-import { YadeaE3 } from '@/components/yadea-e3/YadeaE3';
-import { Nishiki } from '@/components/nishiki/Nishiki';
-import Odora from '@/components/odora/Odora';
-import { YadeaXBull } from '@/components/yadea-x-bull/YadeaXBull';
-import Igo from '@/components/Igo/Igo';
-import I5S from '@/components/I5S/I5S';
-import { YadeaM6i } from '@/components/yadea-M6i/YadeaM6i';
-import { Ulike } from '@/components/ulike/Ulike';
+import HotLine from '@/components/HotLine';
 
 const LayoutWrapper = dynamic(() => import('@/components/Layout/Layout'), {
   ssr: false,
@@ -56,21 +47,10 @@ export default function Home() {
         <Popup setIsShow={setIsShow}/>
         } */}
         <Hero />
-        <VoltGuard />
-        <Odora />
-        <YadeaE3 />
-        <YadeaM6i />
-        <Ulike />
+        <ListProduct />
+        <HotLine />
 
-        <YadeaXBull />
-        <Igo />
-        <I5S />
-
-
-        <Nishiki />
-        {/* <GiaHapDan /> */}
-
-        <ScrollTop />
+        {/* <ScrollTop /> */}
       </LayoutWrapper>
     </React.Suspense>
   );

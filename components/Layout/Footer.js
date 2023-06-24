@@ -14,163 +14,113 @@ import ds from "@/assets/footer/snsIcons/ds.png";
 import tele from "@/assets/footer/snsIcons/tele.png";
 const snsData = [
   {
-    icon: tw,
-    to: "https://twitter.com/FriendifyGPT",
-  },
-  {
     icon: fb,
-    to: "https://www.facebook.com/FriendifyGPT",
+    to: "https://www.facebook.com/xedienduyduc",
+  },
+
+
+
+];
+
+const xeData = [
+  {
+    title: "YADEA VOLTGUARD",
+    to: "/",
   },
   {
-    icon: ins,
-    to: "https://www.instagram.com/friendify.gpt",
+    title: "YADEA ODORA PRO",
+    to: "/",
   },
   {
-    icon: yt,
-    to: "https://www.youtube.com/@friendifygpt/about",
+    title: "YADEA X-Bull",
+    to: "/",
   },
   {
-    icon: ds,
-    to: "https://discord.com/invite/HjFMtwX7nb",
+    title: "YADEA VIGOR",
+    to: "/",
   },
   {
-    icon: tele,
-    to: "https://t.me/Friendify_GPT",
+    title: "YADEA IGO",
+    to: "/",
   },
 ];
-import { NavData } from "./Header";
+const hoTroData = [
+  {
+    title: "Hỗ trợ",
+    to: "/",
+  },
+  {
+    title: "Chính sách bảo hành",
+    to: "/",
+  },
+
+];
+
 
 const Footer = () => {
   const { i18n, t } = useTranslation();
 
   const [activeLink, setActiveLink] = useState(null);
   return (
-    <div className="bg-transparenttext-white ">
-      <div className="text-black custom_container  ">
-        <hr className="" />
-        <div className=" overflow-y-hidden py-[10px] flex  justify-end items-center lg:flex-col  ">
-          <div className="gap-[0px] md:gap-[50px] w-full flex flex-col lg:flex-row lg:justify-between pt-4  max-[900px]:justify-center max-[900px]:items-center ">
-            <div className=" row-span-2 sm:col-span-7 col-start-1 col-end-4 sm:col-end-5 hidden lg:flex flex-col items-start ">
-              <a
-                onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-                className=""
-              >
-                <div className="relative h-[50px] w-[180px]">
-                  <Image
-                    fill
-                    layout="fill"
-                    style={{ objectFit: "contain" }}
-                    src={logo}
-                  />
-                </div>
-              </a>
-            </div>
-
-            <div className=" text-center lg:text-left w-[15%] row-span-2 sm:col-span-2 sm:col-start-7 sm:col-end-9 hidden lg:flex flex-col max-[900px]:mb-4">
-              <p className=" text-[24px] text-[#FFFFFF]  mb-[20px] text-white">
-                {/* {t("footer.about")} */}
-                MENU
-              </p>
-              <ul className="flex flex-col">
-                {NavData?.map((item, index) => {
-                  return (
-                    <li className="h-[30px]" key={`nav-item-${index}`}>
-                      <a key={`link-${index}`} href={item.to}>
-                        <p
-                          className={`text-md text-[#C5E5C5] text-[20px] cursor-pointer animation-hover inline-block relative  hover:text-[#06C270] ${activeLink === item.to ? "text-[#06C270]" : ""
-                            }`}
-                        >
-                          {item.title}
-                        </p>
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-
-            <div className="text-center lg:text-left w-full lg:w-[20%] row-span-2 sm:col-span-2 sm:col-start-7 sm:col-end-9 flex flex-col max-[900px]:mb-4">
-              <p className="text-center lg:text-left  text-[24px]  mb-[20px] text-white">
-                {/* {t("footer.support")} */}
-                LEGAL
-              </p>
-              <ul className="text-xs leading-normal sm:text-base sm:leading-10  font-normal sm:font-medium flex flex-row lg:flex-col justify-between">
-                <li className="h-[30px] text-left ">
-                  <a
-                    href="static/media/policy.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#C5E5C5] text-[15px] sm:text-[20px] hover:text-[#06C270]"
-                  >
-                    Privacy Policy
-                  </a>
-                </li>
-
-                {/* </LinkScroll> */}
-                <li className="h-[30px] text-left ">
-                  <a
-                    href="static/media/term.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#C5E5C5] text-[15px] sm:text-[20px] hover:text-[#06C270]"
-                  >
-                    Terms and services
-                  </a>
-                </li>
-
-                {/* <li className="h-[30px] text-left ">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#C5E5C5] text-[15px] sm:text-[20px] hover:text-[#06C270]"
-                  >
-                    Audit
-                  </a>
-                </li> */}
-              </ul>
-            </div>
-
-            <div className="w-[] flex-1 row-span-2 sm:col-span-2 sm:col-start-11 sm:col-end-13 flex flex-col max-[900px]:text-center max-[900px]:mt-[34px] max-[500px]:text-[10px] ">
-              <p className="  text-[24px] mb-[20px] text-center text-white">
-                {/* {t("footer.support")} */}
-                Follow us
-              </p>
-              <ul className=" font-normal sm:font-medium flex flex-wrap justify-center gap-x-[20px]">
-                {snsData.map((item, index) => {
-                  return (
-                    <li key={`sns-${index}`}>
-                      <div className="cursor-pointer items-center justify-center flex">
-                        <div className="flex">
-                          <a
-                            href={item.to}
-                            target="_blank"
-                            className="flex items-center break-all"
-                          >
-                            <div className="w-[30px] sm:w-[40px] h-[30px] hover:scale-[1.3] transition-all duration-300">
-                              <Image src={item.icon} />
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
+    <div className=" bg-[#e3e9ee] h-[auto] ">
+      <div className="custom_container flex justify-center flex-col">
+        <div className="pt-[50px] flex flex-wrap justify-between">
+          <div>
+            <h1 className=" text-[17px] font-semibold">XE MÁY ĐIỆN THÔNG MINH</h1>
+            <div className="pt-[10px]">
+              {xeData.map((item, index) => (
+                <a href={item.to} key={index}>
+                  <h3 className=" text-[15px] font-medium text-[#798086] hover:text-[#ed6a00]">{item.title}</h3>
+                </a>
+              ))}
             </div>
           </div>
+
+          <div>
+            <h1 className=" text-[17px] font-semibold ">Hỗ Trợ</h1>
+            <div className="pt-[10px]">
+              {hoTroData.map((item, index) => (
+                <a href={item.to} key={index}>
+                  <h3 className=" text-[15px] font-medium text-[#798086] hover:text-[#ed6a00]">{item.title}</h3>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h1 className=" text-[17px] font-semibold lg:pt-0 pt-[10px]">Theo Dõi Xe Điện Hoài Nhơn</h1>
+            <div className="pt-[10px] flex ">
+              {snsData.map((item, index) => (
+                <a href={item.to} key={index} target="_blank">
+                  <div className="p-2">
+                    <Image src={item.icon} width={40} height={40} />
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h1 className=" text-[17px] font-semibold lg:pt-0 pt-[10px]">Liên Hệ</h1>
+            <div className="pt-[10px] text-[15px] font-medium text-[#798086] ">
+              <p className="">
+                Hotline: 093 571 46 89
+              </p>
+              <p className=" ">
+                Đ/c: 215A Trần Hưng Đạo, Hoài Nhon, Vietnam
+              </p>
+            </div>
+          </div>
+
         </div>
-        <hr className="mb-[30px]" />
-        <div className="flex flex-col w-full mb-[20px] ">
-          <span className="text-center text-[#808080] text-[12px] sm:text-[16px] ">
-            Copyright © 2023 Friendify GPT All Right Reserved
-          </span>
-        </div>
+        <div className="h-[1px] bg-[#fff] w-full mt-[50px]" />
+        <span className="text-center text-[15px] font-medium text-[#798086] pt-[15px] ">
+          Copyright © 2023 XeDienHoaiNhon </span>
       </div>
+
     </div>
   );
 };
 
 export default Footer;
+
