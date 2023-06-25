@@ -1,20 +1,22 @@
-import VoltGuard from "@/assets/Volt-Guard/img-right1.png";
-import Odora from "@/assets/odora/Odora-S1.png";
-import E3 from "@/assets/yadea-e3/e3-banner-product.png";
-import M61 from "@/assets/M6i/m6i.png";
-import ulike from "@/assets/ulike/ulike.png";
-import vigor from "@/assets/vigor/yadea-virgo.png";
-import xmen from "@/assets/xmen/xmen-red.png";
-import xBull from "@/assets/yadea-x-bull/XBull.png";
-import iGo from "@/assets/Igo/iGo.png";
-import i5s from "@/assets/xe-dap-dien-I5s/xe-dap-dien-yadea-i5s.png";
-import s3 from "@/assets/yadea-s3/yadeaS3.png";
-import icute from "@/assets/icute/icute.png";
-import nishiki from "@/assets/nishiki/xe-dap-dien-nishiki.png";
+import VoltGuard from "@/assets/Volt-Guard/img-right-w600.png";
+import Odora from "@/assets/odora/Odora-S1-w300.png";
+import E3 from "@/assets/yadea-e3/e3-banner-product-w300.png";
+import M61 from "@/assets/M6i/m6i-w300.png";
+import ulike from "@/assets/ulike/ulike-w3.png";
+import vigor from "@/assets/vigor/yadea-virgo-w300.png";
+import xmen from "@/assets/xmen/xmen-red-w300.png";
+import xBull from "@/assets/yadea-x-bull/XBull-w300.png";
+import iGo from "@/assets/Igo/iGo-w300.png";
+import i5s from "@/assets/xe-dap-dien-I5s/xe-dap-dien-yadea-i5s-w300.png";
+import s3 from "@/assets/yadea-s3/yadeaS3-w300.png";
+import icute from "@/assets/icute/icute-w300.png";
+import nishiki from "@/assets/nishiki/xe-dap-dien-nishiki-w300.png";
 
 
 import React from 'react'
 import { CardListProduct } from "./CardListProduct";
+import { CardProduct } from "./CardProduct";
+import { useRouter } from "next/router";
 
 export const ListProduct = () => {
  const dataProduct = [
@@ -101,15 +103,23 @@ export const ListProduct = () => {
 
  ]
 
+ const router = useRouter()
+ const handleClickProduct = (id, name) => {
+  typeof window !== "undefined" && localStorage.setItem("productId", id);
+  const nameReplace = name
+  router.push(`san-pham/${nameReplace}`);
+ }
  return (
-  <div className='custom_container '>
+  <div className='pt-[100px] custom_container w-full flex flex-wrap sm:justify-between justify-center'>
    {
     dataProduct.map((item, index) => (
-
-     <CardListProduct title={item.title} subtitle={item.subtitle} src={item.src} index={index} />
+     <div onClick={() => { handleClickProduct(index, item?.title) }}>
+      <CardProduct title={item.title} subtitle={item.subtitle} src={item.src} index={index} />
+     </div>
     ))
    }
 
   </div>
  )
 }
+{/* <CardListProduct title={item.title} subtitle={item.subtitle} src={item.src} index={index} /> */ }

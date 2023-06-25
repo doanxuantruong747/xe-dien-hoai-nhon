@@ -1,4 +1,4 @@
-import Logo from "@/assets/logo/LOGO.png";
+import Logo from "@/assets/logo/logo.jpg";
 import menubar from "@/assets/nav/menubar-black.png";
 import { Header_Height } from "constants";
 import Image from "next/image";
@@ -7,18 +7,18 @@ import { useEffect, useRef, useState } from "react";
 import useClickOutSide from "../../hooks/useClickOutSide";
 
 export const NavData = [
-  // {
-  //   title: "SẢN PHẨM",
-  //   to: "/san-pham",
-  // },
-  // {
-  //   title: "CỬA HÀNG",
-  //   to: "/cua-hang",
-  // },
-  // {
-  //   title: "BẢO HÀNH",
-  //   to: "/bao-hanh",
-  // },
+  {
+    title: "SẢN PHẨM",
+    to: "/",
+  },
+  {
+    title: "CỬA HÀNG",
+    to: "/cua-hang",
+  },
+  {
+    title: "BẢO HÀNH",
+    to: "/bao-hanh",
+  },
 
 ];
 
@@ -69,7 +69,7 @@ const Header = () => {
       >
         <nav className="h-full custom_container flex justify-between items-center mx-auto py-3 sm:py-4 w-full ">
           <a href="/" className="">
-            <div className="relative col-start-1 col-end-2 flex items-center w-[90px] h-[75px] cursor-pointer">
+            <div className="relative col-start-1 col-end-2 flex items-center w-[90px] h-[50px] cursor-pointer">
               <Image src={Logo} fill layout="fill" style={{ objectFit: "contain" }} />
             </div>
           </a>
@@ -80,8 +80,8 @@ const Header = () => {
                 <div
                   key={`link-${index}`}
                   onClick={() => router.push(item.to)}
-                  className={` mx-3 cursor-pointer animation-hover inline-block relative text-[#000] text-[16px] font-medium  hover:text-[#000080] ${activeLink === item.to
-                    ? "text-[#000080]"
+                  className={` mx-3 cursor-pointer animation-hover inline-block relative text-[#000] lg:text-[18px] text-[16px]  hover:text-[#2b6cfe] ${activeLink === item.to
+                    ? "text-[#2b6cfe] font-bold"
                     : ""
                     }`}
                 >
@@ -109,13 +109,18 @@ const Header = () => {
               className={`${open ? "navbar-open" : "navbar-close"
                 } lg:hidden navbar w-64 fixed z-[9999999999] bg-[#fff] top-0 right-0 h-screen shadow `}
             >
-              <ul className="list-none text-[#000] text-center flex flex-col">
+              <ul className="list-none text-[#000] text-center flex flex-col pt-5">
                 {NavData?.map((item, index) => {
                   return (
                     <a key={`link-responsive-${index}`} href={item.to}>
                       <p
                         className={
-                          "text-md px-4 mx-2 mt-4  cursor-pointer  inline-block relative font-bold text-[#000] hover:text-[#000080]"
+                          `text-md px-4 mx-2 mt-10  cursor-pointer  inline-block relative font-bold text-[#000] hover:text-[#2b6cfe]
+                          ${activeLink === item.to
+                            ? "text-[#2b6cfe] font-bold"
+                            : ""
+                          }
+                          `
                         }
                       >
                         {item.title}

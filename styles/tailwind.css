@@ -267,16 +267,9 @@ li.check:before {
 
 @media (max-width: 1279px) {
   .custom_container {
-    width: 960px;
+    width: 1000px;
   }
 
-  .card_blog_text_ellipsis {
-    -webkit-line-clamp: 5;
-  }
-
-  .card_our_team_text_ellipsis {
-    -webkit-line-clamp: 3;
-  }
 }
 
 @media (max-width: 1023px) {
@@ -284,22 +277,16 @@ li.check:before {
     width: 720px;
   }
 
-  .text_60_700 {
-    font-size: 45px;
-  }
 
-  .text_32_400 {
-    font-size: 16px;
-  }
-
-  .card_our_team_text_ellipsis {
-    -webkit-line-clamp: 3;
-  }
 }
 
 @media (max-width: 767px) {
   .custom_container {
-    width: 540px;
+    width: 640px;
+  }
+
+  .width-card {
+    /* width: 280px; */
   }
 }
 
@@ -463,9 +450,9 @@ li.check:before {
 } */
 
 
-.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
+/* .swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
   background-color: #ed6a00;
-}
+} */
 
 .card-reverse {
   flex-direction: row-reverse;
