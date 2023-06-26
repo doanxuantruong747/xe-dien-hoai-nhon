@@ -21,8 +21,6 @@ export const DetailProduct = () => {
   }, [router.query])
 
 
-
-
   return (
     <div className=' custom_container pt-[125px]'>
 
@@ -31,6 +29,7 @@ export const DetailProduct = () => {
         <div></div>
         <TopDetail product={product} />
         <div className="mt-[50px] ">
+          <h1 className='md:text-[25px] text-[20px] font-bold'>ĐẶC ĐIỂM NỔI BẬT</h1>
           <DetailSection slideData={product?.imgDetails} />
         </div>
         {/* <div className="mt-[50px] ">

@@ -21,8 +21,6 @@ export const TopDetail = ({ product }) => {
   }, [product?.img])
 
 
-
-
   const tabs = [
     {
       title: (<h1 className='text-[15px] font-bold'>KÍCH THƯỚT</h1>), content: (<><h3 className=' font-bold'>Dài x rộng x cao (mm) : <span className=' font-medium'>{kichThuot?.daiXrongXcao}</span></h3>
@@ -68,17 +66,53 @@ export const TopDetail = ({ product }) => {
         <div>
           <h2 className=' text-[18px] font-bold pt-[10px]'> Chọn màu :</h2>
           <div className=' flex pt-[15px]'>
-            <div className={`w-4 h-4 bg-[#03278a] rounded-[50%] cursor-pointer mr-3 ${color === product?.img?.xanh
-              ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.xanh) }} />
-            <div className={`w-4 h-4 bg-[#bb0303] rounded-[50%] cursor-pointer mx-3 ${color === product?.img?.do
-              ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.do) }} />
+            {product?.img?.do
+              ? (<div className={`w-4 h-4 bg-[#bb0303] rounded-[50%] cursor-pointer mr-3 ${color === product?.img?.do
+                ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.do) }} />)
+              : ""
+            }
 
-            <div className={`w-4 h-4 bg-[#ebe8e8] rounded-[50%] cursor-pointer mx-3 ${color === product?.img?.trang
-              ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.trang) }} />
-            <div className={`w-4 h-4 bg-[#000] rounded-[50%] cursor-pointer mx-3 ${color === product?.img?.den
-              ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.den) }} />
-            <div className={`w-4 h-4 bg-[#a09d9d] rounded-[50%] cursor-pointer mx-3 ${color === product?.img?.xam
-              ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.xam) }} />
+            {product?.img?.xanhNhat
+              ? (<div className={`w-4 h-4 bg-[#05c5c5] rounded-[50%] cursor-pointer mx-3 ${color === product?.img?.xanhNhat
+                ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.xanhNhat) }} />)
+              : ""
+            }
+
+            {product?.img?.xanh
+              ? (<div className={`w-4 h-4 bg-[#03278a] rounded-[50%] cursor-pointer mx-3 ${color === product?.img?.xanh
+                ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.xanh) }} />)
+              : ""
+            }
+
+            {product?.img?.xanhLa
+              ? (<div className={`w-4 h-4 bg-[#038a68] rounded-[50%] cursor-pointer mx-3 ${color === product?.img?.xanhLa
+                ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.xanhLa) }} />)
+              : ""
+            }
+
+            {product?.img?.trang
+              ? (<div className={`w-4 h-4 bg-[#ebe8e8] rounded-[50%] cursor-pointer mx-3 ${color === product?.img?.trang
+                ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.trang) }} />)
+              : ""
+            }
+
+            {product?.img?.den
+              ? (<div className={`w-4 h-4 bg-[#000] rounded-[50%] cursor-pointer mx-3 ${color === product?.img?.den
+                ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.den) }} />)
+              : ""
+            }
+
+            {product?.img?.denNham
+              ? (<div className={`w-4 h-4 bg-[#222020] rounded-[50%] cursor-pointer mx-3 ${color === product?.img?.denNham
+                ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.denNham) }} />)
+              : ""
+            }
+
+            {product?.img?.xam
+              ? (<div className={`w-4 h-4 bg-[#a09d9d] rounded-[50%] cursor-pointer mx-3 ${color === product?.img?.xam
+                ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.xam) }} />)
+              : ""
+            }
           </div>
         </div>
         <div className='pt-5'>
