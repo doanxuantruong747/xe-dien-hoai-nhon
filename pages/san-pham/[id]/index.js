@@ -4,6 +4,7 @@ import ScrollTop from '@/components/ScrollTop';
 import dynamic from 'next/dynamic';
 import { DetailProduct } from '@/components/detail-product/DetailProduct';
 import HotLine from '@/components/HotLine';
+import { SimilarProduct } from '@/components/detail-product/SimilarProduct';
 
 
 const LayoutWrapper = dynamic(() => import('@/components/Layout/Layout'), {
@@ -18,6 +19,8 @@ const ProductDetail = () => {
       </Head>
       <LayoutWrapper>
         <DetailProduct />
+        <SimilarProduct />
+
         <HotLine />
         {/* <ScrollTop /> */}
       </LayoutWrapper>
