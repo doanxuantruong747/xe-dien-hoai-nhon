@@ -16,7 +16,7 @@ const SanPham = () => {
   return (
     <React.Suspense>
       <Head>
-        <title>Bếp Thi Thi</title>
+        <title>Xe Điện Hoài Nhơn</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <LayoutWrapper>
