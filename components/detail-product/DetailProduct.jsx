@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import { TopDetail } from "./TopDetail";
 import { Detail } from "./Detail";
-import { ProductDetails } from "mockData/productDetails";
+import { ProductDetails } from "mockData/ProductDetails";
 import DetailSection from './DetailSection';
 
 
@@ -18,7 +18,10 @@ export const DetailProduct = () => {
         setProduct(item)
       }
     })
-  }, [router.query]);
+  }, [router.query])
+
+
+
 
   return (
     <div className=' custom_container pt-[125px]'>
