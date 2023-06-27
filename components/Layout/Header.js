@@ -112,7 +112,7 @@ const Header = () => {
               <ul className="list-none text-[#000] text-center flex flex-col pt-5">
                 {NavData?.map((item, index) => {
                   return (
-                    <a key={`link-responsive-${index}`} href={item.to}>
+                    <div key={`link-responsive-${index}`} onClick={() => { router.push(`${item.to}`) }}>
                       <p
                         className={
                           `text-md px-4 mx-2 mt-10  cursor-pointer  inline-block relative font-bold text-[#000] hover:text-[#2b6cfe]
@@ -125,7 +125,7 @@ const Header = () => {
                       >
                         {item.title}
                       </p>
-                    </a>
+                    </div>
                   );
                 })}
               </ul>

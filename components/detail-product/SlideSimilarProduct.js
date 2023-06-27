@@ -28,7 +28,7 @@ const SlideSimilarProduct = ({ slideData }) => {
       <Swiper
         // navigation={true}
         spaceBetween={30}
-        slidesPerView={1.25}
+        slidesPerView={1.2}
         pagination={{
           dynamicBullets: true,
         }}
