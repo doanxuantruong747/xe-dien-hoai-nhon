@@ -4,6 +4,7 @@ import Head from 'next/head';
 import React from 'react';
 import '../../i18next';
 import HotLine from '@/components/HotLine';
+import { BaoHanh } from '@/components/baoHanh/BaoHanh';
 
 const LayoutWrapper = dynamic(() => import('@/components/Layout/Layout'), {
   ssr: false,
@@ -16,7 +17,7 @@ const About = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <LayoutWrapper>
-
+        <BaoHanh />
         <HotLine />
         {/* <ScrollTop /> */}
       </LayoutWrapper>
