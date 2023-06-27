@@ -81,7 +81,7 @@ export const TopDetail = ({ product }) => {
             }
 
             {product?.img?.vang
-              ? (<div className={`w-4 h-4 bg-[#f3ce27] rounded-[50%] cursor-pointer mr-3 ${color === product?.img?.vang
+              ? (<div className={`w-4 h-4 bg-[#f3ce27] rounded-[50%] cursor-pointer mx-3 ${color === product?.img?.vang
                 ? "outline outline-offset-2 outline-[#2b6cfe] " : ""} `} onClick={() => { handleClickColor(product?.img?.vang) }} />)
               : ""
             }
