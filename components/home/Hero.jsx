@@ -54,11 +54,13 @@ export const Hero = () => {
                 className="mySwiper h-[100%] w-full"
             >
                 {dataSlider.map((slide, index) => (
-                    <SwiperSlide>
-                        <div className="">
+
+                    <SwiperSlide key={index}>
+                        <div className="" >
                             <Image src={screenMode === 'desktop' ? slide.src : slide.srcMobi} fill layout="fill" style={{ objectFit: "contain" }} />
                         </div>
                     </SwiperSlide>
+
                 ))}
 
             </Swiper>

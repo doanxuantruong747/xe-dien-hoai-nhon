@@ -11,13 +11,13 @@ export const ListProduct = () => {
     const handleClickProduct = (id, name) => {
         typeof window !== "undefined" && localStorage.setItem("productId", id);
         const nameReplace = name
-        router.push(`san-pham/${nameReplace}`);
+        router.push(`/${nameReplace}`);
     }
     return (
         <div className='pt-[100px] custom_container w-full flex flex-wrap sm:justify-between justify-center'>
             {
                 Products?.map((item, index) => (
-                    <div onClick={() => { handleClickProduct(index, item?.title) }}>
+                    <div onClick={() => { handleClickProduct(index, item?.title) }} key={index}>
                         <CardProduct title={item.title} subtitle={item.subtitle} src={item.src} index={index} />
                     </div>
                 ))

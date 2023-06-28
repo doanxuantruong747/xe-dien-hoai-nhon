@@ -10,7 +10,7 @@ export const CardProduct = ({ title, subtitle, src, index }) => {
 
             <AnimationOnScroll animateIn="animate__zoomIn" className=" w-[100%]">
                 <div className=''>
-                    <Image src={src} />
+                    <Image src={src} alt='' filllayout="fill" style={{ objectFit: "contain" }} />
                 </div>
             </AnimationOnScroll>
 

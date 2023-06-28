@@ -17,12 +17,12 @@ const Collapse = ({ title, content }) => {
             {isOpen ? (
               <i
                 className="fa fa-minus absolute right-[10px]  text-xs group-open:opacity-0 flex justify-center items-center w-[25px] h-[25px]"
-                style={{ borderRadius: '50%', border: '2px solid white' }}
+                style={{ borderRadius: '50%', border: '2px solid black' }}
               ></i>
             ) : (
               <i
                 className="fa fa-plus absolute right-[10px]  text-xs group-open:opacity-0 flex justify-center items-center w-[25px] h-[25px]"
-                style={{ borderRadius: '50%', border: '2px solid white' }}
+                style={{ borderRadius: '50%', border: '2px solid black' }}
               />
             )}
           </button>
@@ -31,7 +31,7 @@ const Collapse = ({ title, content }) => {
           className={`text-[#000] overflow-hidden transition-all duration-200 ease-in-out ${isOpen ? ' h-auto' : 'h-[0]'
             } `}
         >
-          <div className="p-4 text-[18px] leading-normal text-blue-gray-500/80">{content}</div>
+          <div className="p-4 lg:text-[18px] text-[15px] leading-normal text-blue-gray-500/80">{content}</div>
         </div>
       </div>
     </div>

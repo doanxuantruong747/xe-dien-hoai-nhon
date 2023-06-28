@@ -35,7 +35,7 @@ const SlideSimilarProduct = ({ slideData }) => {
         modules={[Pagination, Navigation]}
         breakpoints={{
           640: {
-            slidesPerView: 3,
+            slidesPerView: 2.5,
           },
           768: {
             slidesPerView: 4,
