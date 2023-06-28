@@ -23,7 +23,7 @@ const TextAndImage = ({
           {contentComponent}
         </div>
         <div className={`img relative flex-1 h-[auto] w-[90%] sm:w-[50%] m-auto`}>
-          <Image alt="content img" src={imageSrc} />
+          <Image alt="content img" src={imageSrc} filllayout="fill" style={{ objectFit: "contain" }} />
         </div>
       </div>
     </div>

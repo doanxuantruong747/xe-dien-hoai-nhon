@@ -17,7 +17,7 @@ export const Guarantee = () => {
             </div>
             <div className=' flex md:justify-between justify-evenly md:flex-row flex-col '>
                 <div className='md:w-[35%] w-full bg-[#eeeff1] rounded-[10px] mb-10'>
-                    <h1 className='lg:text-[25px] text-[20px] font-bold text-[#2b6cfe] px-5 pt-5 text-center'> XE ĐẠP ĐIỆN DUY ĐỨC</h1>
+                    <h1 className='lg:text-[25px] text-[20px] font-bold text-[#2b6cfe] px-5 pt-5 text-center'> XE MÁY ĐIỆN DUY ĐỨC</h1>
                     <div className='h-[1px] mx-5 bg-[#2b6cfe] mt-3' />
                     <p className='pl-5 pt-5 lg:text-[16px] text-[14px]'>Giờ đóng cửa - mở cửa: 8:00 - 21:00 </p>
                     <p className='pl-5 pt-5 lg:text-[16px] text-[14px]'>Hotline: 093 571 46 89 </p>

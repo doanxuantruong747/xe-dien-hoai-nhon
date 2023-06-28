@@ -103,7 +103,7 @@ const Header = () => {
               className="cursor-pointer"
               src={menubar}
               width={25} height={25}
-
+              filllayout="fill" style={{ objectFit: "contain" }}
             />
             <nav
               className={`${open ? "navbar-open" : "navbar-close"

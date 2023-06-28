@@ -19,7 +19,7 @@ const ProductDetail = () => {
       </Head>
       <LayoutWrapper>
         <DetailProduct />
-        <SimilarProduct />
+
 
         <HotLine />
         {/* <ScrollTop /> */}
